@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="../assets/imgs/1logo-new.png" />
+      <span>WiffApp</span>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button href="/home">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main-content">
+    <div class="filter">
+      <ion-item class="filter-by">
+          <ion-label>
+            <h2>{{name}}</h2>
+          </ion-label>
+        </ion-item>
+    </div>
+    <div class="list">
+      <div class="list-item" *ngFor="let item of questions;let indexOfelement=index;">
+        <ion-label>
+          <h2>{{indexOfelement+1}}. {{item.question}}</h2>
+        </ion-label>
+        <ion-toggle class="lefttoggle" (click)="toggle(indexOfelement)"></ion-toggle><span class="leftspan">{{item.answer?item.answer:"NO"}}</span>
+        <ion-label *ngIf="item.order == 3">
+          <br/>
+          a. {{item.subquestion1}}<br/>
+          <ion-input [(ngModel)] = "sub1"></ion-input>
+          b. {{item.subquestion2}}<br/>
+          <ion-input [(ngModel)] = "sub2"></ion-input>
+          c. {{item.subquestion3}}
+          <ion-input [(ngModel)] = "sub3"></ion-input>
+        </ion-label><br/>
+      </div>
+      <div class="list-item">
+        <ion-label>
+          <label for="file-upload" class="custom-file-upload">
+              <i class="fa fa-cloud-upload"></i> Image1 Upload
+          </label>
+            <input id="file-upload" name="imageUrl1" type="file" style="width:200px" accept="image/*" nbInput fullWidth placeholder="Image" (change)="handleInputChange1($event)" />
+          <label for="file-upload1" class="custom-file-upload">
+              <i class="fa fa-cloud-upload"></i> Image2 Upload
+          </label>
+            <input id="file-upload1" name="imageUrl2" type="file" style="width:200px" accept="image/*" nbInput fullWidth placeholder="Image" (change)="handleInputChange2($event)" />
+        </ion-label>
+      </div>
+      <button class="mybutton" style="background-color: green;" (click)="remain()">
+        Submit Wiff
+      </button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,150 @@
+ion-header{
+  ion-toolbar{
+    --background: #475a68;
+
+    img {
+      height: 42px;
+      margin: 7px;
+    }
+
+    ion-button{
+      --padding-start: 5px;
+      --padding-end: 5px;
+
+      width: 35px;
+      height: 35px;
+
+      ion-icon{
+        color: white;
+      }
+    }
+
+    ion-menu-button{
+      color: white;
+    }
+  }
+}
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.lefttoggle{
+  float:right;
+  left:-19px;
+}
+
+.leftspan{
+  float:right;
+  left:80px;
+}
+
+.mybutton {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  width:100%;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #999;
+  border: none;
+  box-shadow: 0 9px #999;
+}
+
+.mybutton:hover {background-color: #999}
+
+.mybutton:active {
+  background-color: #999;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+  span{
+   font-family: Lucida Calligraphy;
+   font-weight: bold;
+   color:black;
+   font-size: 4vh;
+  }
+
+ion-content{
+  --background: #080e17 url(../../assets/imgs/recipe-bg.jpg) center bottom no-repeat;
+
+  .main-content{
+    padding-top: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+  
+    .home-banner{
+      text-align: center;
+      
+    }
+    div.filter{
+      display: flex;
+      ion-item.filter-by{
+        width: 100%;
+        margin-bottom: 5px;
+        --background: linear-gradient(180deg, #ffffff 0, #545454 36%, #545454 68%, #ffffff 100%);
+        --border-style: none !important;
+        border: 1px solid black;
+        ion-label{
+            text-align: center;
+            font-size: 15px;
+            margin: 0px 10px;
+            color: #e8c957;
+            font-weight: bold;
+        }
+      }
+      ion-item.filter-by:hover {
+        --background: linear-gradient(180deg, #ffffff 0, #353535 36%, #353535 68%, #ffffff 100%);
+        opacity: 1;
+        transition: all 0.8s
+      }
+    }
+  }
+
+  .list{
+    .list-item{
+      background: linear-gradient(135deg, #676666 0, #6f6f6f 51%, #adaaab 100%);
+      color: black;
+      padding: 10px;
+      margin-bottom: 1px;
+
+      h2{
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+      ion-toggle{
+        width: 60px;
+        --handle-background-checked: #ffffff;
+        --background: red;
+        --background-checked: lightgreen;
+      }
+      span{
+        color: black;
+        font-size: 12px;
+        position: relative;
+        top: 14px;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+ion-footer{
+  ion-toolbar{
+    --background: #475a68;
+    --min-height: 30px;
+
+    text-align: center;
+    color: white;
+    font-size: 10px;
+  }
+}

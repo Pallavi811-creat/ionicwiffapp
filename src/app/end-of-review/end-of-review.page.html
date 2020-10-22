@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="../assets/imgs/1logo-new.png" />
+      <span>WiffApp</span>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button href="/home">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main-content">
+    <div class="filter" (click)="move()">
+      <ion-item class="filter-by">
+        <ion-label>
+          <h2>{{name}}</h2>
+        </ion-label>
+      </ion-item>
+    </div>
+
+    <button class="mybutton" style="background-color: green;" (click)="singlereview(name,distance)">
+      Submit Wiff
+    </button>
+    <div class="list">
+      <div class="list-item" *ngFor="let item of reviews">
+        <ion-label>
+          <h4 *ngIf="item.review==5;">Review - ⭐⭐⭐⭐⭐</h4>
+          <h4 *ngIf="item.review==4;">Review - ⭐⭐⭐⭐</h4>
+          <h4 *ngIf="item.review==3;">Review - ⭐⭐⭐</h4>
+          <h4 *ngIf="item.review==2;">Review - ⭐⭐</h4>
+          <h4 *ngIf="item.review==1;">Review - ⭐</h4>
+          <h4>Date: {{item.date}}</h4>
+          <h4>Time: {{item.time}}</h4>
+        </ion-label>
+      </div>
+    </div>
+  </div>
+</ion-content>
+

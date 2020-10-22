@@ -1,0 +1,213 @@
+ion-header{
+    ion-toolbar{
+        --background: #475a68;
+  
+        img {
+            height: 42px;
+            margin: 7px;
+        }
+  
+        ion-button{
+            --padding-start: 5px;
+            --padding-end: 5px;
+    
+            width: 35px;
+            height: 35px;
+    
+            ion-icon{
+            color: white;
+            }
+        }
+  
+        ion-menu-button{
+            color: white;
+        }
+    }
+}
+
+  span{
+   font-family: Lucida Calligraphy;
+   font-weight: bold;
+   color:black;
+   font-size: 4vh;
+  }
+
+  
+ion-content{
+    --background: url('../../assets/imgs/mesaurement-bg.jpg') no-repeat center center / cover;
+
+    .main-content{
+        padding-top: 18px;
+        padding-left: 15px;
+        padding-right: 15px;
+        
+        .home-banner{
+            h1{
+            text-align: center;
+            font-size: 18px;
+            margin: 10px 0;
+            color: white;
+            font-weight: normal;
+            }
+        }
+
+        .success-msg{
+            h1{
+            text-align: center;
+            font-size: 12px;
+            margin: 10px 0;
+            color: green;
+            font-weight: bold;
+            }
+        }
+
+        .landing-link{
+            margin-top: 50px;
+            ion-item{
+                --background: url('../../assets/imgs/input-outline.png') no-repeat 0 0 /100% 100%; //center center / cover;
+
+                --padding-start: 0;
+                --padding-end: 0;
+
+                margin-top: 8px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 8px;
+
+                width: 100%;
+
+                img {
+                    margin-left: 15px;
+                    width: 22px;
+                }
+
+                ion-input{
+                    color: white;
+                    font-weight: bold;
+                    font-size: 15px;
+                    text-align: center;
+                    width: 100%;
+                }
+
+                ion-label{
+                    color: #ababab;
+                    font-weight: bold;
+                    font-size: 15px;
+                }
+            }
+            ion-button{
+                --background: #ff7400;
+                margin-top: 20px;
+                color: #fff;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .back-btn{
+        position: absolute;
+        bottom: 40px;
+        ion-button{
+            margin-left: 0px;
+            --background:transparent;
+            --padding-start:0px;
+            --padding-end:0px;
+            ion-item{
+                width: 100%;
+                margin-left: 0px;
+                --padding-start:15px;
+                --background: #1b242b;
+                ion-icon{
+                    font-size: 20px;
+                    margin-right: 10px;
+                    color: #ff7400;
+                }
+                ion-label{
+                    //--margin-start: 10px;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    .help-btn{
+        position: absolute;
+        bottom: 40px;
+        right: 0px;
+        ion-button{
+            margin-left: 0px;
+            --background:transparent;
+            --padding-start:0px;
+            --padding-end:0px;
+            ion-item{
+                width: 100%;
+                margin-left: 0px;
+                --padding-start:25px;
+                --background: #1b242b;
+                ion-label{
+                    color: #ffffff;
+                    margin-right: 10px;
+                }
+                ion-icon{
+                    font-size: 20px;
+                    color: #ff7400;
+                }
+            }
+        }
+    }
+
+    // .help-panel{
+    //     position: absolute;
+    //     bottom: 40px;
+    //     background: #fff url('../../assets/imgs/help-toggle-bg.jpg') no-repeat 0 0 / 100% 100%;
+    //     padding: 10px 20px 90px 20px;
+    //     height: auto;
+    //     ion-button{
+    //         margin-left: 95%;
+    //         --padding-start:0px;
+    //         width: 20px;
+    //         height: 20px;
+    //         --background: #fff url('../../assets/icon/wcp-close-icon.jpg') no-repeat center center / cover;
+    //     }
+    //     span{
+    //         color: #ffffff;
+    //     }
+    //     &.actived{
+    //         transition: all 0.3s ease-in;
+    //         opacity: 1;
+    //     }
+    //     &.inactived{
+    //         pointer-events:none;
+    //         transition: all 0.3s ease-out;
+    //         opacity: 0;
+    //     }
+    // }
+
+    .progress{
+        position: absolute;
+        bottom: 0px!important;
+        height: 10px;
+        width: 100%;
+        padding-left: 0px!important;
+        margin-left: 0px!important;
+        background-color: #ffffff;
+        .progress-bar{
+            margin-left: 0px;
+            height: 10px;
+            background-color: #ff7400;
+            width: 24.9%;
+        }
+    }
+}
+  
+ion-footer{
+    ion-toolbar{
+        --background: #475a68;
+        --min-height: 30px;
+
+        text-align: center;
+        color: white;
+        font-size: 10px;
+    }
+}

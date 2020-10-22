@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main-content">
+    <div class="home-banner">
+      <h1>List of Restaurants</h1>
+    </div>
+    Filter by
+    <ion-item class = "filter-title">
+      <ion-label>
+        Distance:
+      </ion-label>
+      <ion-input [(ngModel)]="distance" type="number" (keyup)="filter()"></ion-input>
+    </ion-item>
+    <ion-item class = "filter-title">
+      <ion-label>
+        Rating:
+      </ion-label>
+      <ion-input  [(ngModel)]="rating" (keyup)="filter()" type="number"></ion-input>
+    </ion-item>
+    <div class="list">
+      <div class="list-item" *ngFor="let item of restaurants">
+        <ion-label>
+          <h2>{{item.name}}</h2>
+          <h4>Distance - {{item.distance}} &nbsp;&nbsp; Rating - {{item.rating}}</h4>
+        </ion-label>
+      </div>
+    </div>
+  </div>
+</ion-content>

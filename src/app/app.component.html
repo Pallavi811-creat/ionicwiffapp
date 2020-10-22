@@ -1,0 +1,19 @@
+
+<ion-app>
+  <ion-menu class="height: 100vh;" side="start" menuId="first" contentId="main-content" >
+    <ion-header>
+      <p>Start Menu</p>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item href="/review-a-restaurant">Review a restaurant</ion-item>
+        <ion-item href="/my-profile">My profile</ion-item>
+        <ion-item href="/my-reviews">My reviews</ion-item>
+        <ion-item routerLink="/auth">
+          <ion-label>Log Out</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>

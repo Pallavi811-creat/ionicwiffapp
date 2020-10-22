@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="../assets/imgs/1logo-new.png" />
+      <span>WiffApp</span>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button href="/home">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="filter">
+    <ion-item class="map" (click)="filterByDistance()">
+        <ion-label>
+          <h2>Map</h2>
+        </ion-label>
+      </ion-item>
+    <ion-item class="filter-by" (click)="movetopage()">
+      <ion-label>
+        <h2>List View</h2>
+      </ion-label>
+    </ion-item>
+  </div>
+  <ion-item class="filter-by">
+    <select class="selectClass" id="select" [(ngModel)]="original">
+      <option *ngFor="let result of places" value={{result.plus_code.compound_code}}>{{result.name}}</option>
+    </select>
+  </ion-item>
+  <div style="text-align:right">
+    <ion-button (click)="calculateAndDisplayRoute()">Go Restaurant</ion-button>
+  </div>
+  <div #map id="map"></div> 
+</ion-content>

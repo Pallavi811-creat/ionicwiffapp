@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="../assets/imgs/1logo-new.png" />
+      <span>WiffApp</span>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button href="/home">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main-content">
+    <div class="filter">
+      <ion-item class="filter-by">
+        <ion-label>
+          <h2 *ngIf="state == 0">Wiff Review</h2>
+          <h2 *ngIf="state == 1">Your Wiff Review</h2>
+        </ion-label>
+      </ion-item>
+    </div>
+
+    <div class="list">
+      <div class="list-item">
+        <ion-label>
+          <h2>{{name}}</h2>
+          <h3>Distance - {{distance}}&nbsp;Km</h3>
+          <ion-row *ngIf="first != 'undefined' || second != 'undefined'">
+            <h4 style="width:100%">Photos:</h4>
+            <img *ngIf="first != ''" style="height:100px;width:45%;margin-top: 30px;" [src]="first">
+            <img *ngIf="second != ''" style="height:100px;width:45%;margin-top: 30px;margin-left:10%" [src]="second">
+          </ion-row>
+          <h4 *ngIf="lastreview==5">Rating - ⭐⭐⭐⭐⭐</h4>
+          <h4 *ngIf="lastreview==4;">Rating - ⭐⭐⭐⭐</h4>
+          <h4 *ngIf="lastreview==3;">Rating - ⭐⭐⭐</h4>
+          <h4 *ngIf="lastreview==2;">Rating - ⭐⭐</h4>
+          <h4 *ngIf="lastreview==1;">Rating - ⭐</h4>
+          <h4 *ngIf="lastreview==0;">Rating - </h4>
+          <h4>Date: {{date}}</h4>
+          <h4>Time: {{time}}</h4>
+          <div class="optional-questions">
+            <h3>{{questions.question}}</h3>
+            <h3>Answer - {{optional}}</h3>
+            <h3>{{questions.subquestion1}}</h3>
+            <h3>Answer - {{sub1}}</h3>
+            <h3>{{questions.subquestion2}}</h3>
+            <h3>Answer - {{sub2}}</h3>
+            <h3>{{questions.subquestion3}}</h3>
+            <h3>Answer - {{sub3}}</h3>
+          </div>
+        </ion-label><br/><br/>
+        <ion-button *ngIf="state == 0" style="float:right;margin-top: -35px;" (click)="givereview(name,distance,rating,lastreview)">Give Review</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+

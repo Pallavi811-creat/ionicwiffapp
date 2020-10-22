@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="../assets/imgs/1logo-new.png" />
+      <span>WiffApp</span>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button href="/home">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="restaurant"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="pie-chart" ></ion-icon>
+      </ion-button>
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="main-content">
+    <div class="home-banner">
+      <h1>ENTER YOUR<br><h2>MEASUREMENTS</h2></h1>
+    </div>
+    <div class="success-msg" *ngIf="update_success">
+      <h1>Profile Updated Successfully.</h1>
+    </div>
+    <div class="landing-link">
+      <ion-item expand="full" *ngFor="let item of datas">
+        <img src="../assets/icon/{{item.img}}" />
+        <ion-input placeholder="{{item.placeholder}}" [(ngModel)] = "item.value" (ionFocus) = "focused($event)" (ionBlur) = "blured($event)"></ion-input>
+        <ion-label>
+          {{item.unit}}
+        </ion-label>
+      </ion-item>
+      <ion-button expand="full" (click) = "funcUpdate()">
+        CONTINUE
+      </ion-button>
+    </div>
+  </div>
+  <div class="back-btn" *ngIf = "showBar">
+    <ion-button (click) = "goBack()">
+      <ion-item>
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        <ion-label>Back</ion-label>
+      </ion-item>
+    </ion-button>
+  </div>
+  <div class="help-btn" *ngIf = "showBar">
+    <ion-button (click)="showHelp = true">
+      <ion-item>
+        <ion-label>Help</ion-label>
+        <ion-icon name="alert-circle"></ion-icon>
+      </ion-item>
+    </ion-button>
+  </div>
+  <!-- <div class="help-panel" [ngClass]="{'actived':showHelp, 'inactived':!showHelp}">
+    <ion-button (click)="showHelp=false"></ion-button><br><br>
+    <span>{{helps[current_step]}}</span>
+  </div> -->
+  <div class="progress" *ngIf = "showBar">
+    <div class="progress-bar"></div>
+  </div>
+</ion-content>

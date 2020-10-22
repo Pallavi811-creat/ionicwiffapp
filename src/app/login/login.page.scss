@@ -1,0 +1,39 @@
+ion-content{
+  --background: #909090;
+  --padding-top: 100px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+
+  ion-img{
+    margin-bottom: 2vh;
+    margin-right:-1vh;
+    height:25vh;
+  }
+
+  span{
+    font-family: Lucida Calligraphy;
+    font-weight: bold;
+    color:black;
+    font-size: 6vh;
+  }
+  
+  center{
+    margin-bottom: 5vh;
+  }
+
+  ion-input{
+    --background: white;
+    --padding-start: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+
+  ion-button{
+    --border-radius: 5px;
+
+    width: 100%;
+    margin: 0;
+    margin-bottom: 15px;
+    height: 38px;
+  }
+}

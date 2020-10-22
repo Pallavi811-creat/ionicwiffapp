@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="../assets/imgs/1logo-new.png" />
+      <span>WiffApp</span>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button href="/home">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main-content">
+    <div class="home-banner">
+      <h1>Wiff Houses</h1>
+    </div>
+    <ion-searchbar showcancelbutton="" (ionInput)="filterList($event)"></ion-searchbar>
+    <div class="filter">
+      <ion-item class="filter-by" (click)="filterByDistance()">
+          <ion-label>
+            <h2>Distance</h2>
+          </ion-label>
+        </ion-item>
+      <ion-item class="filter-by" (click)="filterByRating()">
+        <ion-label>
+          <h2>Rating</h2>
+        </ion-label>
+      </ion-item>
+    </div>
+    <div class="list">
+      <div class="list-item" *ngFor="let item of restaurants">
+        <ion-label (click)="singlereview(item.name,item.distance,item.lastreview)">
+          <h2>{{item.name}}</h2>
+          <h4 *ngIf="item.lastreview==5; else">Distance - {{item.distance}}&nbsp;Km &nbsp;&nbsp;<br/> Rating - ⭐⭐⭐⭐⭐</h4>
+          <h4 *ngIf="item.lastreview==4; else">Distance - {{item.distance}}&nbsp;Km &nbsp;&nbsp;<br/> Rating - ⭐⭐⭐⭐</h4>
+          <h4 *ngIf="item.lastreview==3; else">Distance - {{item.distance}}&nbsp;Km &nbsp;&nbsp;<br/> Rating - ⭐⭐⭐</h4>
+          <h4 *ngIf="item.lastreview==2; else">Distance - {{item.distance}}&nbsp;Km &nbsp;&nbsp;<br/> Rating - ⭐⭐</h4>
+          <h4 *ngIf="item.lastreview==1; else">Distance - {{item.distance}}&nbsp;Km &nbsp;&nbsp;<br/> Rating - ⭐</h4>
+          <h4 *ngIf="!item.lastreview||item.lastreview==0">Distance - {{item.distance}}&nbsp;Km &nbsp;&nbsp;<br/> Rating - 0</h4>
+        </ion-label>
+      </div>
+    </div>
+  </div>
+</ion-content>
+

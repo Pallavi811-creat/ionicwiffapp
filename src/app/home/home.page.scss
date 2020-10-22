@@ -1,0 +1,106 @@
+ion-header{
+    ion-toolbar{
+      --background: #475a68;
+  
+      img {
+        height: 42px;
+        margin: 7px;
+      }
+  
+      ion-button{
+        --padding-start: 5px;
+        --padding-end: 5px;
+  
+        width: 35px;
+        height: 35px;
+  
+        ion-icon{
+          color: white;
+        }
+      }
+  
+      ion-menu-button{
+        color: white;
+      }
+    }
+  }
+.selectClass{
+  width: 100%;
+  height: 100%;
+  border:none;
+  outline:none;
+  background: #1e1e1e;
+  color:white;
+}
+ion-card {
+    max-height: 200px;
+    overflow: scroll;
+    position: absolute;
+    z-index: 1;
+}
+  .scroll {
+    height: 100%
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+
+  span{
+   font-family: Lucida Calligraphy;
+   font-weight: bold;
+   color:black;
+   font-size: 4vh;
+  }
+  
+  ion-content{
+    .fx-here-map{
+        width:100%; height:90%
+    }
+    div.filter{
+        display: flex;
+        ion-item.filter-by{
+          width: 50%;
+          --background: linear-gradient(180deg, #ffffff 0, #353535 36%, #353535 68%, #ffffff 100%);
+          --border-style: none !important;
+          border: 1px solid black;
+          ion-label{
+              text-align: center;
+              font-size: 15px;
+              margin: 0px 10px;
+              color: #e8c957;
+              font-weight: bold;
+          }
+        }
+        ion-item.map{
+            width: 50%;
+            --background: linear-gradient(180deg, #ffffff 0, #545454 36%, #545454 68%, #ffffff 100%);
+            --border-style: none !important;
+            border: 1px solid black;
+            ion-label{
+                text-align: center;
+                font-size: 15px;
+                margin: 0px 10px;
+                color: #e8c957;
+                font-weight: bold;
+            }
+          }
+        ion-item.filter-by:hover {
+            --background: linear-gradient(180deg, #ffffff 0, #545454 36%, #545454 68%, #ffffff 100%);
+          opacity: 1;
+          transition: all 0.8s
+        }
+      }
+  }
+  
+  ion-footer{
+    ion-toolbar{
+      --background: #475a68;
+      --min-height: 30px;
+  
+      text-align: center;
+      color: white;
+      font-size: 10px;
+    }
+  }
